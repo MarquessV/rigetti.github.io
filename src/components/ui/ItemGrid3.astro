@@ -39,7 +39,7 @@ const {
           )}
           <div class={twMerge('flex text-xl font-bold justify-center', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
-            <p class={twMerge('text-muted mt-2 flex justify-center', descriptionClass, itemClasses?.description)} set:html={description} />
+            <p class={twMerge('text-muted mt-2 justify-center text-center', descriptionClass, itemClasses?.description)} set:html={description} />
           )}
           {supportedLanguages && <div class="mt-4 h-12 justify-center">
             <div class="flex justify-center">
