@@ -1,9 +1,6 @@
 # Rigetti Open Source 
 
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
-     alt="AstroWind Lighthouse Score" width="100" height="358">
-
-This repo contains the source for the **[Rigetti Open Source Homepage](https://rigetti.github.io)**
+This repo contains the source for the **[Rigetti Open Source Homepage](https://rigetti.github.io)**.
 
 # Getting Started
 
@@ -37,9 +34,9 @@ Astro uses [file-based routing](https://docs.astro.build/en/core-concepts/astro-
 
 ### Layouts
 
-Related to how an individual page gets rendered, are [Layouts](https://docs.astro.build/en/core-concepts/layouts/). These structure the UI and can provide common elements that should be shared across pages. 
+Related to how an individual page gets rendered are [Layouts](https://docs.astro.build/en/core-concepts/layouts/). These structure the UI and can provide common elements that should be shared across pages. 
 
-Layouts are defined in `./src/layouts` and mostly provide metadata and global CSS.
+Layouts are defined in `./src/layouts` and for this site mostly provide metadata and global CSS.
 
 ### Components
 
