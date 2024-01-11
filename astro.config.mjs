@@ -54,7 +54,7 @@ export default defineConfig({
           'c',
           'rust',
           'python-light',
-          'github-light',
+          'github-light'
         ],
       },
     }),
