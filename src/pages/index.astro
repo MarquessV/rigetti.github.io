@@ -14,183 +14,197 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero2
-    actions={[
-      {
-        variant: 'primary',
-        text: 'View projects',
-        href: '#projects',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-    image={{ src: '~/assets/images/rigetti_brain.svg', alt: 'Rigetti'}}
-    ,
-  >
-    <Fragment slot="title">
-      Rigetti <span class="hidden xl:inline">Open Source</span>
-    </Fragment>
+  <html class="scroll-smooth">
+    <Hero2
+      actions={[
+        {
+          variant: 'primary',
+          text: 'View projects',
+          href: '#projects',
+          icon: 'tabler:caret-down-filled',
+        },
+      ]}
+      image={{ src: '~/assets/images/rigetti_brain.svg', alt: 'Rigetti QPU Diagram' }}
+      ,
+    >
+      <Fragment slot="title">
+        Rigetti <span class="hidden xl:inline">Open Source</span>
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Explore <span class="font-semibold">Rigetti</span>'s free, open-source and production-tested projects.
-      </span>
-    </Fragment>
-  </Hero2>
+      <Fragment slot="subtitle">
+        <span class="hidden sm:inline">
+          Explore <span class="font-semibold">Rigetti</span>'s free, open-source and production-tested projects.
+        </span>
+      </Fragment>
+    </Hero2>
 
-  <!-- Projects Widget ************** -->
-  <Projects
-    id="projects"
-    title="Projects"
-    subtitle=""
-    tagline=""
-    items={[
-      {
-        title: 'pyQuil',
-        panel: "flex justify-center items-center",
-        description: "Rigetti's flagship library for building and executing Quil programs",
-        callToActions: [
-          {
+    <!-- Projects Widget ************** -->
+    <Projects
+      id="projects"
+      title="Projects"
+      subtitle=""
+      tagline=""
+      items={[
+        {
+          title: 'pyQuil',
+          description: "Rigetti's flagship library for building and executing Quil programs",
+          callToActions: [
+            {
               variant: 'primary',
               icon: 'tabler:brand-github',
               text: 'pyQuil on GitHub',
-              href: 'https://github.com/rigetti/pyquil'
-          },
-        ],
-        supportedLanguages: [{icon_name: "skill-icons:python-light", href: "https://pypi.org/project/pyquil/"}],
-      },
-      {
-        title: 'Quil Toolkit',
-        description: 'Implementation of the Quil specification in Rust and Python',
-        supportedLanguages: [{icon_name: "skill-icons:python-light", href: "https://pypi.org/project/quil/"},
-        {icon_name: "skill-icons:rust", href: "https://crates.io/crates/quil-rs"}],
-        callToActions: [
-          {
+              href: 'https://github.com/rigetti/pyquil',
+            },
+          ],
+          supportedLanguages: [
+            {
+              icon_name: 'skill-icons:python-light',
+              href: 'https://pypi.org/project/pyquil/',
+            },
+          ],
+        },
+        {
+          title: 'Quil Toolkit',
+          description: 'Implementation of the Quil specification in Rust and Python',
+          supportedLanguages: [
+            {
+              icon_name: 'skill-icons:python-light',
+              href: 'https://pypi.org/project/quil/',
+            },
+            {
+              icon_name: 'skill-icons:rust',
+              href: 'https://crates.io/crates/quil-rs',
+            },
+          ],
+          callToActions: [
+            {
               variant: 'primary',
               icon: 'tabler:brand-github',
               text: 'quil-rs on GitHub',
-              href: 'https://github.com/rigetti/quil-rs'
-          },
-          {
+              href: 'https://github.com/rigetti/quil-rs',
+            },
+            {
               variant: 'secondary',
               icon: 'tabler:brand-github',
               text: 'quil-py on GitHub',
-              href: 'https://github.com/rigetti/quil-rs/tree/main/quil-py'
-          },
-        ],
-      },
-      {
-        title: 'The QCS SDK',
-        description:
-          'A client library for executing quantum programs on the Rigetti Quantum Cloud Services (QCS) platform.', 
-        supportedLanguages: [
-          {
-            icon_name: "skill-icons:python-light",
-            href: "https://pypi.org/project/qcs-sdk-python/"
-          },
-          {
-            icon_name: "skill-icons:rust",
-            href: "https://crates.io/crates/qcs"
-          },
-          {
-            icon_name: "skill-icons:c",
-            href: "https://github.com/rigetti/qcs-sdk-c"
-          },
-        ],
-        callToActions: [
-          {
+              href: 'https://github.com/rigetti/quil-rs/tree/main/quil-py',
+            },
+          ],
+        },
+        {
+          title: 'The QCS SDK',
+          description:
+            'A client library for executing quantum programs on the Rigetti Quantum Cloud Services (QCS) platform.',
+          supportedLanguages: [
+            {
+              icon_name: 'skill-icons:python-light',
+              href: 'https://pypi.org/project/qcs-sdk-python/',
+            },
+            {
+              icon_name: 'skill-icons:rust',
+              href: 'https://crates.io/crates/qcs',
+            },
+            {
+              icon_name: 'skill-icons:c',
+              href: 'https://github.com/rigetti/qcs-sdk-c',
+            },
+          ],
+          callToActions: [
+            {
               variant: 'primary',
               icon: 'tabler:brand-github',
               text: 'QCS SDK Rust on GitHub',
-              href: 'https://github.com/rigetti/qcs-sdk-rust'
-          },
-          {
+              href: 'https://github.com/rigetti/qcs-sdk-rust',
+            },
+            {
               variant: 'secondary',
               icon: 'tabler:brand-github',
               text: 'qcs-sdk-c on GitHub',
-              href: 'https://github.com/rigetti/qcs-sdk-c'
-          },
-      ]},
-      {
-        title: 'Rigetti PyO3',
-        description: 'Utilities to support common patterns in PyO3 generated Rust bindings to Python',
-        supportedLanguages: [
-          {
-            icon_name: "skill-icons:rust",
-            href: "https://crates.io/crates/rigetti-pyo3/"
-          }
-        ],
-        callToActions: [
-          {
+              href: 'https://github.com/rigetti/qcs-sdk-c',
+            },
+          ],
+        },
+        {
+          title: 'Rigetti PyO3',
+          description: 'Utilities to support common patterns in PyO3 generated Rust bindings to Python',
+          supportedLanguages: [
+            {
+              icon_name: 'skill-icons:rust',
+              href: 'https://crates.io/crates/rigetti-pyo3/',
+            },
+          ],
+          callToActions: [
+            {
               variant: 'primary',
               icon: 'tabler:brand-github',
               text: 'rigetti-pyo3 on GitHub',
-              href: 'https://github.com/rigetti/rigetti-pyo3'
-          },
-        ]
-      },
-      {
-        title: 'QCS API Client',
-        description: 'A low level client for the Rigetti Quantum Cloud Services (QCS) API',
-        supportedLanguages: [
-          {
-            icon_name: "skill-icons:python-light",
-            href: "https://pypi.org/project/qcs-api-client/"
-          },
-          {
-            icon_name: "skill-icons:rust",
-            href: "https://crates.io/crates/qcs-api-client-openapi/"
-          }
-        ],
-        callToActions: [
-          {
+              href: 'https://github.com/rigetti/rigetti-pyo3',
+            },
+          ],
+        },
+        {
+          title: 'QCS API Client',
+          description: 'A low level client for the Rigetti Quantum Cloud Services (QCS) API',
+          supportedLanguages: [
+            {
+              icon_name: 'skill-icons:python-light',
+              href: 'https://pypi.org/project/qcs-api-client/',
+            },
+            {
+              icon_name: 'skill-icons:rust',
+              href: 'https://crates.io/crates/qcs-api-client-openapi/',
+            },
+          ],
+          callToActions: [
+            {
               variant: 'primary',
               icon: 'tabler:brand-github',
               text: 'qcs-api-client-rust on GitHub',
-              href: 'https://github.com/rigetti/qcs-api-client-rust'
-          },
-          {
+              href: 'https://github.com/rigetti/qcs-api-client-rust',
+            },
+            {
               variant: 'secondary',
               icon: 'tabler:brand-github',
               text: 'qcs-api-client-python on GitHub',
-              href: 'https://github.com/rigetti/qcs-api-client-python'
-          },
-        ]
-      },
-      {
-        title: 'libquil',
-        description: 'Bindings to quilc, the optimizing Quil compiler and QVM, a Quantum Virtual Machine',
-        supportedLanguages: [
-          {
-            icon_name: "skill-icons:rust",
-            href: "https://crates.io/crates/libquil-sys/"
-          },
-          {
-            icon_name: "skill-icons:c",
-            href: "https://github.com/rigetti/libquil"
-          },
-        ],
-        callToActions: [
-          {
+              href: 'https://github.com/rigetti/qcs-api-client-python',
+            },
+          ],
+        },
+        {
+          title: 'libquil',
+          description: 'Bindings to quilc, the optimizing Quil compiler and QVM, a Quantum Virtual Machine',
+          supportedLanguages: [
+            {
+              icon_name: 'skill-icons:rust',
+              href: 'https://crates.io/crates/libquil-sys/',
+            },
+            {
+              icon_name: 'skill-icons:c',
+              href: 'https://github.com/rigetti/libquil',
+            },
+          ],
+          callToActions: [
+            {
               variant: 'primary',
               icon: 'tabler:brand-github',
               text: 'libquil on GitHub',
-              href: 'https://github.com/rigetti/libquil'
-          },
-          {
+              href: 'https://github.com/rigetti/libquil',
+            },
+            {
               variant: 'secondary',
               icon: 'tabler:brand-github',
               text: 'libquil-sys on GitHub',
-              href: 'https://github.com/rigetti/libquil-sys'
-          },
-        ]
-      }],
-    }
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Projects>
+              href: 'https://github.com/rigetti/libquil-sys',
+            },
+          ],
+        },
+      ]}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      </Fragment>
+    </Projects>
+  </html>
 
   <CallToAction
     tagline="Need qubits?"

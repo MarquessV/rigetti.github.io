@@ -12,7 +12,7 @@ const {
   title: titleClass = '',
   description: descriptionClass = '',
   icon: defaultIconClass = 'text-primary',
-  supportedLanguages: [String] = []
+  supportedLanguages: [String] = [],
 } = classes;
 ---
 
@@ -39,19 +39,28 @@ const {
           )}
           <div class={twMerge('flex text-xl font-bold justify-center', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
-            <p class={twMerge('text-muted mt-2 justify-center text-center', descriptionClass, itemClasses?.description)} set:html={description} />
+            <p
+              class={twMerge('text-muted mt-2 justify-center text-center', descriptionClass, itemClasses?.description)}
+              set:html={description}
+            />
           )}
-          {supportedLanguages && <div class="mt-4 h-12 justify-center">
-            <div class="flex justify-center">
-            {supportedLanguages.map((language) => <a href={language.href}><Icon class="h-full w-10 mx-2" name={language.icon_name}/></a>)}
-            </div>
-          </div>
-          }
-          {callToActions && callToActions.map((callToAction) => 
-            <div class="flex mt-2 justify-center">
-              <Button {...callToAction} />
+          {supportedLanguages && (
+            <div class="mt-4 h-12 justify-center">
+              <div class="flex justify-center">
+                {supportedLanguages.map((language) => (
+                  <a href={language.href}>
+                    <Icon class="h-full w-10 mx-2" name={language.icon_name} />
+                  </a>
+                ))}
+              </div>
             </div>
           )}
+          {callToActions &&
+            callToActions.map((callToAction) => (
+              <div class="flex mt-2 justify-center">
+                <Button {...callToAction} />
+              </div>
+            ))}
         </div>
       ))}
     </div>
