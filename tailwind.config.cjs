@@ -11,7 +11,7 @@ module.exports = {
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
         blue: {
-          DEFAULT: 'var(--rigetti-color-blue)'
+          DEFAULT: 'var(--rigetti-color-blue)',
         },
         darkblue: {
           DEFAULT: 'var(--rigetti-color-darkblue)',
